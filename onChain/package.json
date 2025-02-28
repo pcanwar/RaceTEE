@@ -1,0 +1,23 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "node": "npx hardhat node",
+    "ganache": "ganache --fork \"wss://eth-mainnet.g.alchemy.com/v2/xxxx\" --fork.blockNumber 21768776 --miner.blockTime 12 --miner.defaultGasPrice xxxx --wallet.totalAccounts 200 --host 0.0.0.0 --port 8545 --wallet.mnemonic \"lift focus style steel census extra glory visual mercy mind differ pelican\" --wallet.defaultBalance 100",
+    "ignition": "npm run compile && npm run deploy && (npm run exportArtifacts & npm run exportAccounts)",
+    "compile": "npx hardhat compile",
+    "exportArtifacts": "node scripts/exportArtifacts.js",
+    "exportAccounts": "npx hardhat run scripts/exportAccounts.js --network hardhat",
+    "exportAccounts:ganache": "npx hardhat run scripts/exportAccounts.js --network ganache",
+    "deploy": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:ganache": "npx hardhat run scripts/deploy.js --network ganache"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "ganache-time-traveler": "^1.0.16",
+    "ganache": "^7.9.2",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "web3": "^4.16.0"
+  }
+}

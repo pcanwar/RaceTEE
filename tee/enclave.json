@@ -1,0 +1,38 @@
+{
+    "exe": "tee",
+    "key": "./private.pem",
+    "debug": true,
+    "heapSize": 512,
+    "productID": 1,
+    "securityVersion": 1,
+    "files": [
+        {
+            "source": "./artifacts/accounts.json",
+            "target": "./artifacts/accounts.json"
+        },
+        {
+            "source": "./artifacts/managementAddress.json",
+            "target": "./artifacts/managementAddress.json"
+        },
+        {
+            "source": "./artifacts/ManagementContract.json",
+            "target": "./artifacts/ManagementContract.json"
+        },
+        {
+            "source": "./artifacts/StandardProgramContract.json",
+            "target": "./artifacts/StandardProgramContract.json"
+        },
+        {
+            "source": "./artifacts/SystemContract.json",
+            "target": "./artifacts/SystemContract.json"
+        },
+        {
+            "source": "./key/tempMgtKey.json",
+            "target": "./key/tempMgtKey.json"
+        },
+        {
+            "source": "./key/tempTxKey.json",
+            "target": "./key/tempTxKey.json"
+        }
+    ]
+}

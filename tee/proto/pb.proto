@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "./proto;pb";
+
+message UserConfig {
+	bool HistoryKeyDiscard = 1;
+	uint32 KeyRotation = 2;
+	repeated string ACL = 3;        
+}
+
+
+message Info {
+	repeated string Keys = 1;     
+	string CodeKey = 2;
+	bool HistoryKeyDiscard = 3;
+	uint32 KeyRotation = 4;
+	repeated string ACL = 5;
+	uint32 ExecutionCount = 6;
+	uint32 Nounce = 7;
+}
+
+message GolangInput {
+	string FuncName = 1;
+	bytes Args = 2;
+}

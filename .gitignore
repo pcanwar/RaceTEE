@@ -1,0 +1,19 @@
+# onChain
+onChain/cache
+onChain/artifacts
+onChain/node_modules
+
+onChain/ignition/deployments
+
+
+# client
+client/client
+client/artifacts
+
+
+# tee
+tee/tee
+tee/artifacts
+
+logs
+**/.DS_Store
