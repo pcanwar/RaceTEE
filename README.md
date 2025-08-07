@@ -6,13 +6,15 @@ This project consists of three primary components: `onChain`, `client`, and `tee
 
 ## 1. `onChain`
 
-The `onChain` directory contains the smart contracts deployed on the blockchain.
+The `onChain` directory contains the smart contracts deployed on the blockchain, built with Hardhat v6.1.0 and comprehensive testing.
 
 ### System-Related Contracts
 These contracts manage **Trusted Execution Environments (TEEs)** and ensure the secure execution of privacy programs. They handle key functions such as **deployment, execution, and state verification** for privacy-preserving applications.
 
 ### User-Defined Contracts
 These contracts are written and deployed by users to function as **privacy programs** within our system.
+
+📖 **See [onChain/README.md](onChain/README.md) for detailed smart contract documentation.**
 
 
 ## 2. `client`
