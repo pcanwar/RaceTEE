@@ -1,23 +1,28 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "node": "npx hardhat node",
-    "ganache": "ganache --fork \"wss://eth-mainnet.g.alchemy.com/v2/xxxx\" --fork.blockNumber 21768776 --miner.blockTime 12 --miner.defaultGasPrice xxxx --wallet.totalAccounts 200 --host 0.0.0.0 --port 8545 --wallet.mnemonic \"lift focus style steel census extra glory visual mercy mind differ pelican\" --wallet.defaultBalance 100",
+    "start": "npx hardhat node",
     "ignition": "npm run compile && npm run deploy && (npm run exportArtifacts & npm run exportAccounts)",
     "compile": "npx hardhat compile",
     "exportArtifacts": "node scripts/exportArtifacts.js",
     "exportAccounts": "npx hardhat run scripts/exportAccounts.js --network hardhat",
-    "exportAccounts:ganache": "npx hardhat run scripts/exportAccounts.js --network ganache",
-    "deploy": "npx hardhat run scripts/deploy.js --network localhost",
-    "deploy:ganache": "npx hardhat run scripts/deploy.js --network ganache"
+    "deploy": "npx hardhat run scripts/deploy.js --network hardhat",
+    "test": "npx hardhat test"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "ganache-time-traveler": "^1.0.16",
-    "ganache": "^7.9.2",
-    "hardhat": "^2.22.17"
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.26.2"
   },
-  "dependencies": {
-    "web3": "^4.16.0"
+  "overrides": {
+    "cookie": ">=0.7.0",
+    "tmp": ">=0.2.4",
+    "elliptic": ">=6.6.1",
+    "undici": ">=5.28.6",
+    "brace-expansion": ">=2.0.2",
+    "glob": ">=10.0.0",
+    "inflight": "npm:@isaacs/inflight@^1.0.1",
+    "@nomicfoundation/hardhat-ethers": {
+      "lodash.isequal": "npm:fast-deep-equal@^3.1.3"
+    }
   }
 }

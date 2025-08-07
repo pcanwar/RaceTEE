@@ -4,7 +4,7 @@ pragma solidity ^0.8.28;
 import "./SystemContract.sol";
 
 contract QuickSelect is SystemContract {
-    function quickSelect(int256[] memory arr, uint256 k) public returns (int256) {
+    function quickSelect(int256[] memory arr, uint256 k) public pure returns (int256) {
         require(k > 0 && k <= arr.length, "Invalid k");
         uint256 index = arr.length - k; 
         return _quickSelect(arr, 0, int256(arr.length - 1), int256(index));

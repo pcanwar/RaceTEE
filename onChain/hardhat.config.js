@@ -20,12 +20,8 @@ module.exports = {
         // interval: 12000
       },
     },
-    ganache: {
-      url: "http://localhost:8545",
-      accounts: {
-        count: 200,
-        mnemonic: "lift focus style steel census extra glory visual mercy mind differ pelican",
-      },
+    localhost: {
+      url: "http://127.0.0.1:8545"
     },
   },
 };

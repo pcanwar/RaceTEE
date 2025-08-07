@@ -3,20 +3,11 @@ const { ethers, network } = require("hardhat");
 const { ensureDirectoryExists } = require("./dirExists");
 
 async function main() {
-  // load mnemonic from hardhat or ganache
-  let hardhatConfig
-  let m
-  let count
-  if (network.name == "localhost" || network.name == "hardhat") {
-    hardhatConfig = require("hardhat").config.networks.hardhat.accounts;
-    m = hardhatConfig.mnemonic || null;
-    count = hardhatConfig.count
-  }else{
-    ganacheConfig = require("hardhat").config.networks.ganache;
-    count = ganacheConfig.accounts.count || 10;
-    m = ganacheConfig.accounts.mnemonic || null;
-    console.log("m", m)
-  }
+  // load mnemonic from hardhat configuration
+  let hardhatConfig = require("hardhat").config.networks.hardhat.accounts;
+  let m = hardhatConfig.mnemonic || "test test test test test test test test test test test junk"; // default hardhat mnemonic
+  let count = hardhatConfig.count || 20; // default to 20 accounts
+  
   const mnemonic = ethers.Mnemonic.fromPhrase(m)
 
 
